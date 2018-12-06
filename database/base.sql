@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 14-11-2018 a las 20:30:28
+-- Tiempo de generación: 05-12-2018 a las 23:32:21
 -- Versión del servidor: 5.7.24-0ubuntu0.16.04.1
 -- Versión de PHP: 7.0.32-0ubuntu0.16.04.1
 
@@ -38,7 +38,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id_admin`, `admin_name`, `password`, `create_time`) VALUES
-(1, 'root', '7993e11204b215b27694b6f139e34ce8', '2018-11-08 06:31:37');
+(1, 'root', '31e62ebbba28ef5dcde7a179bf3c32c7', '2018-12-06 04:09:06');
 
 -- --------------------------------------------------------
 
@@ -303,7 +303,9 @@ INSERT INTO `tecnica` (`idtecnica`, `nombre`, `competencia_idcompetencia`) VALUE
 (13, 'Python', 5),
 (14, '.Net', 5),
 (15, 'Gambas', 5),
-(16, 'Visual Basic', 5);
+(16, 'Visual Basic', 5),
+(17, 'REACT', 1),
+(18, 'Node', 1);
 
 -- --------------------------------------------------------
 
@@ -338,12 +340,11 @@ CREATE TABLE `trabajo` (
 --
 
 INSERT INTO `trabajo` (`anos_exp`, `activo`, `nombre`, `salario`, `fecha_post`, `descripcion`, `telefono`, `correo`, `horario_id_horario`, `subcategoria_idsubcategoria`, `categoria_idcategoria`, `localidad_idlocalidad`, `ingles_idingles`, `empresa_idempresa`, `sexo_idsexo`, `educacion_ideducacion`, `edad_req`, `id_trabajo`, `Registro`) VALUES
-(19, 'si', 'Becario', 12000, '2018-11-17', 'Jefe', '5526277283', 'tvkr@krmc.com', 1, 1, 1, 2, 3, 2, 2, 1, 19, 1, '2018-11-15 00:56:53'),
-(1, 'si', 'Becario', 1200, '2018-11-16', '6to a 7mo semestre', '5537737288', 'roberto@gmail.com', 4, 1, 1, 1, 3, 3, 2, 4, 19, 2, '2018-11-15 00:56:53'),
-(1, 'si', 'Bosques de las Lomas a', 1, '2018-11-10', 'w', '1', 'rvirvvrivr@gamil.com', 2, 1, 1, 2, 4, 8, 2, 4, 19, 3, '2018-11-15 00:56:53'),
+(19, 'Activar', 'Becario', 12000, '2018-11-17', 'Jefe', '5526277283', 'tvkr@krmc.com', 1, 1, 1, 2, 3, 2, 2, 1, 19, 1, '2018-11-15 00:56:53'),
+(1, 'Activar', 'Becario', 1200, '2018-11-16', '6to a 7mo semestre', '5537737288', 'roberto@gmail.com', 4, 1, 1, 1, 3, 3, 2, 4, 19, 2, '2018-11-15 00:56:53'),
 (3, 'Activar', 'Becario', 2000, '2018-11-06', '33', '33', 'roberto@gmail.com', 1, 1, 1, 1, 1, 1, 2, 5, 34, 6, '2018-11-15 00:56:53'),
-(3, 'Activar', 'Desarrollador', 3000, '2018-11-01', 'trabajo descripcion', '552536585937', 'r.lomel@hotmail.com', 2, 1, 1, 1, 2, 2, 1, 2, 2, 12, '2018-11-15 00:56:53'),
-(3, 'Activar', '2rf', 2, '2018-11-08', '24r', '3', 'r@gmai.com', 2, 1, 1, 1, 2, 3, 2, 3, 22, 46, '2018-11-15 01:21:32');
+(3, 'Activar', 'Desarrollador junior', 3000, '2018-11-01', 'trabajo descripcion', '552536585937', 'r.lomel@hotmail.com', 4, 1, 1, 1, 2, 1, 1, 3, 2, 12, '2018-11-15 00:56:53'),
+(1, 'Activar', 'Becario', 10000, '2018-11-29', 'Trabajo para Becario en Sistemas', '4422420366', 'Alex_macouzet@azteca.com.mx', 4, 1, 1, 1, 3, 1, 3, 3, 18, 47, '2018-11-29 01:18:06');
 
 -- --------------------------------------------------------
 
@@ -362,11 +363,12 @@ CREATE TABLE `trabajo_has_habilidad` (
 --
 
 INSERT INTO `trabajo_has_habilidad` (`habilidad_idhabilidad`, `importancia`, `trabajo_id_trabajo`) VALUES
-(1, 2, 12),
-(2, 1, 46),
-(5, 1, 12),
-(16, 3, 12),
-(17, 3, 46);
+(1, 1, 47),
+(2, 2, 47),
+(3, 3, 47),
+(6, 2, 12),
+(10, 1, 12),
+(11, 3, 12);
 
 -- --------------------------------------------------------
 
@@ -386,11 +388,12 @@ CREATE TABLE `trabajo_has_tecnica` (
 --
 
 INSERT INTO `trabajo_has_tecnica` (`tecnica_idtecnica`, `importancia`, `pericidad`, `trabajo_id_trabajo`) VALUES
-(1, 2, 3, 12),
-(1, 1, 3, 46),
-(2, 1, 2, 12),
-(6, 3, 3, 46),
-(10, 3, 5, 12);
+(13, 1, 2, 12),
+(1, 1, 1, 47),
+(17, 2, 3, 12),
+(2, 2, 1, 47),
+(16, 3, 5, 12),
+(6, 3, 3, 47);
 
 -- --------------------------------------------------------
 
@@ -429,10 +432,13 @@ INSERT INTO `user_register` (`id_usuario`, `correo`, `password`, `create_time`) 
 (24, 'roberto24@gmail.com', '7993e11204b215b27694b6f139e34ce8', '2018-10-15 23:14:46'),
 (25, 'roberto88@gmail.com', '7993e11204b215b27694b6f139e34ce8', '2018-10-23 03:34:49'),
 (26, 'roberto34@gmail.com', '7993e11204b215b27694b6f139e34ce8', '2018-11-08 04:54:04'),
-(27, 'admin@gmail.com', '7993e11204b215b27694b6f139e34ce8', '2018-11-13 07:33:00'),
+(27, 'admin@gmail.com', '31e62ebbba28ef5dcde7a179bf3c32c7', '2018-12-06 05:29:51'),
 (28, 'robbi@gmail.com', '7993e11204b215b27694b6f139e34ce8', '2018-11-13 08:15:10'),
 (29, 'r.lomel@hotmail.com', '81dc9bdb52d04dc20036dbd8313ed055', '2018-11-13 15:33:40'),
-(30, 'robonilla@gmail.com', '7993e11204b215b27694b6f139e34ce8', '2018-11-15 02:13:40');
+(30, 'robonilla@gmail.com', '7993e11204b215b27694b6f139e34ce8', '2018-11-15 02:13:40'),
+(31, 'gordo@gmail.com', '31e62ebbba28ef5dcde7a179bf3c32c7', '2018-11-27 16:40:29'),
+(32, 'roberto@mandrapro.com', '37e1144a79120ecbb689a4de5e4a402f', '2018-12-06 05:03:56'),
+(33, 'cynthia23@gmail.com', '31e62ebbba28ef5dcde7a179bf3c32c7', '2018-11-30 02:14:26');
 
 -- --------------------------------------------------------
 
@@ -450,9 +456,7 @@ CREATE TABLE `usuario` (
   `linkedin` varchar(50) DEFAULT NULL,
   `sueldo_actual` int(11) DEFAULT NULL,
   `salario_deseado` int(11) DEFAULT NULL,
-  `fecha_registro` timestamp NULL DEFAULT NULL,
   `activo` varchar(15) DEFAULT NULL,
-  `completo` varchar(5) DEFAULT NULL,
   `descripcion_habilidad` varchar(450) DEFAULT NULL,
   `descripcion_persona` varchar(450) DEFAULT NULL,
   `horario_id_horario` int(11) DEFAULT NULL,
@@ -470,14 +474,17 @@ CREATE TABLE `usuario` (
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`nombre`, `apellido_paterno`, `apellido_materno`, `edad`, `telefono`, `celular`, `linkedin`, `sueldo_actual`, `salario_deseado`, `fecha_registro`, `activo`, `completo`, `descripcion_habilidad`, `descripcion_persona`, `horario_id_horario`, `subcategoria_idsubcategoria`, `categoria_idcategoria`, `localidad_idlocalidad`, `ingles_idingles`, `sexo_idsexo`, `educacion_ideducacion`, `user_register_id_usuario`, `Registro`) VALUES
-(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 24, '2018-11-15 02:22:35'),
-(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 25, '2018-11-15 02:22:35'),
-(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 26, '2018-11-15 02:22:35'),
-('eub4', 'rf', 'j', 1, '777', '99', '0990', 987, 89099, NULL, 'Activar', NULL, '33', 'jjj', 1, 1, 1, 2, 2, 2, 2, 27, '2018-11-15 02:22:35'),
-('ggmmm', 'uhuuh', 'hb', 1, '1', '1', 'ghh', 55, 66, NULL, NULL, NULL, NULL, 'h', 1, 1, 1, 1, 4, 1, 1, 28, '2018-11-15 02:22:35'),
-('regina', 'lomelin', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, 1, NULL, 29, '2018-11-15 02:22:35'),
-('R', 'B', 'I', 12, '22', 'e', NULL, NULL, NULL, NULL, 'Activar', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 30, '2018-11-15 02:22:35');
+INSERT INTO `usuario` (`nombre`, `apellido_paterno`, `apellido_materno`, `edad`, `telefono`, `celular`, `linkedin`, `sueldo_actual`, `salario_deseado`, `activo`, `descripcion_habilidad`, `descripcion_persona`, `horario_id_horario`, `subcategoria_idsubcategoria`, `categoria_idcategoria`, `localidad_idlocalidad`, `ingles_idingles`, `sexo_idsexo`, `educacion_ideducacion`, `user_register_id_usuario`, `Registro`) VALUES
+(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 24, '2018-11-15 02:22:35'),
+(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 25, '2018-11-15 02:22:35'),
+(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 26, '2018-11-15 02:22:35'),
+('eub4', 'rf', 'j', 1, '777', '99', '0990', 987, 89099, '', '33', 'jjj', 1, 1, 1, 2, 2, 2, 2, 27, '2018-11-15 02:22:35'),
+('ggmmm', 'uhuuh', 'hb', 1, '1', '1', 'ghh', 55, 66, NULL, NULL, 'h', 1, 1, 1, 1, 4, 1, 1, 28, '2018-11-15 02:22:35'),
+('regina', 'lomelin', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, 1, NULL, 29, '2018-11-15 02:22:35'),
+('R', 'B', 'I', 12, '22', '23', 'e', 3, 2, 'Activar', 'a', 'a', 4, 1, 1, 2, 2, 2, 4, 30, '2018-11-15 02:22:35'),
+(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 31, '2018-11-27 16:40:29'),
+('Roberto', 'Bonilla', 'Ibarra', 21, '4423780146', '4423780146', 'No tengo', 6000, 10000, 'Activar', 'Soy una persona habilidosa', 'Soy una persona apasionada', 4, 1, 1, 1, 4, 2, 3, 32, '2018-11-29 00:51:00'),
+(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 33, '2018-11-30 02:14:26');
 
 -- --------------------------------------------------------
 
@@ -496,12 +503,18 @@ CREATE TABLE `usuario_has_habilidad` (
 --
 
 INSERT INTO `usuario_has_habilidad` (`habilidad_idhabilidad`, `importancia`, `user_register_id_usuario`) VALUES
-(1, 1, 27),
-(2, 2, 27),
-(2, 2, 30),
-(3, 1, 30),
-(8, 3, 27),
-(16, 3, 30);
+(NULL, 1, 31),
+(NULL, 2, 31),
+(NULL, 3, 31),
+(NULL, 1, 33),
+(NULL, 2, 33),
+(NULL, 3, 33),
+(1, 3, 30),
+(1, 2, 32),
+(2, 1, 30),
+(2, 1, 32),
+(3, 3, 32),
+(9, 2, 30);
 
 -- --------------------------------------------------------
 
@@ -522,11 +535,20 @@ CREATE TABLE `usuario_has_tecnica` (
 
 INSERT INTO `usuario_has_tecnica` (`tecnica_idtecnica`, `importancia`, `pericidad`, `user_register_id_usuario`) VALUES
 (1, 1, 2, 27),
-(2, 2, 4, 27),
-(6, 3, 5, 27),
+(4, 2, 2, 27),
+(6, 3, 2, 27),
 (1, 1, 2, 30),
-(3, 2, 3, 30),
-(10, 3, 4, 30);
+(3, 2, 2, 30),
+(10, 3, 2, 30),
+(NULL, 1, NULL, 31),
+(NULL, 2, NULL, 31),
+(NULL, 3, NULL, 31),
+(1, 1, 3, 32),
+(2, 2, 2, 32),
+(3, 3, 5, 32),
+(NULL, 1, NULL, 33),
+(NULL, 2, NULL, 33),
+(NULL, 3, NULL, 33);
 
 --
 -- Índices para tablas volcadas
@@ -742,17 +764,17 @@ ALTER TABLE `subcategoria`
 -- AUTO_INCREMENT de la tabla `tecnica`
 --
 ALTER TABLE `tecnica`
-  MODIFY `idtecnica` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `idtecnica` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT de la tabla `trabajo`
 --
 ALTER TABLE `trabajo`
-  MODIFY `id_trabajo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id_trabajo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 --
 -- AUTO_INCREMENT de la tabla `user_register`
 --
 ALTER TABLE `user_register`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 --
 -- Restricciones para tablas volcadas
 --

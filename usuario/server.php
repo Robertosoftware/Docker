@@ -3,6 +3,7 @@ session_start();
 $correo = "";
 $errors = array(); 
 $db = mysqli_connect('localhost', 'root', '254088Ma!', 'mandra');
+        mysqli_set_charset($db, 'utf8');
 if (isset($_POST['reg_user_register'])) {
   // receive all input values from the form
   $correo = mysqli_real_escape_string($db, $_POST['correo']);

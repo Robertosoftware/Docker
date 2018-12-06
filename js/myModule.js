@@ -14,6 +14,14 @@ app.config(function($routeProvider){
 				templateUrl:"partials/Exito.php",
 				controller:"mainCtrl"
 		})
+    .when("/Cambio-contraseña", {
+				templateUrl:"partials/Cexito.php",
+				controller:"mainCtrl"
+		})
+    .when("/Error-contraseña", {
+				templateUrl:"partials/Cerror.php",
+				controller:"mainCtrl"
+		})
     .when("/Usuario-competencia", {
 				templateUrl:"partials/usuariocompetencia.php",
 				controller:"mainCtrl"
