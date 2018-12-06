@@ -9,6 +9,36 @@ if (isset($_GET['vp1trabajo'])) {
   	  $_SESSION['id'] = $edit;
         header('location: ../../index-admin.php#!/Consulta-trabajo');
 }
+if (isset($_GET['vp2trabajo'])) {
+         $edit = mysqli_real_escape_string($db, $_GET['vp2trabajo']);
+  	  $_SESSION['id'] = $edit;
+        header('location: ../../index-admin.php#!/Consulta-trabajo2');
+}
+if (isset($_GET['vp3trabajo'])) {
+         $edit = mysqli_real_escape_string($db, $_GET['vp3trabajo']);
+  	  $_SESSION['id'] = $edit;
+        header('location: ../../index-admin.php#!/Consulta-trabajo3');
+}
+if (isset($_GET['vp4trabajo'])) {
+         $edit = mysqli_real_escape_string($db, $_GET['vp4trabajo']);
+  	  $_SESSION['id'] = $edit;
+        header('location: ../../index-admin.php#!/Consulta-trabajo4');
+}
+if (isset($_GET['vp5trabajo'])) {
+         $edit = mysqli_real_escape_string($db, $_GET['vp5trabajo']);
+  	  $_SESSION['id'] = $edit;
+        header('location: ../../index-admin.php#!/Consulta-trabajo5');
+}
+if (isset($_GET['vp6trabajo'])) {
+         $edit = mysqli_real_escape_string($db, $_GET['vp6trabajo']);
+  	  $_SESSION['id'] = $edit;
+        header('location: ../../index-admin.php#!/Consulta-trabajo6');
+}
+if (isset($_GET['vp7trabajo'])) {
+         $edit = mysqli_real_escape_string($db, $_GET['vp7trabajo']);
+  	  $_SESSION['id'] = $edit;
+        header('location: ../../index-admin.php#!/Consulta-trabajo7');
+}
 if (isset($_POST['categoria'])) {
 $nombre="";
 $descripcion="";

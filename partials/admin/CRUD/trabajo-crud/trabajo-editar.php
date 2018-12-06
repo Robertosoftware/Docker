@@ -1,6 +1,6 @@
 <?php session_start();?>
 <div class="jumbotron labelac">
-<form method="post" action="partials/admin/action.php">
+<form method="post" action="partials/admin/CRUD/action.php">
 <?php
         $db = mysqli_connect('localhost', 'root', '254088Ma!', 'mandra');
         mysqli_set_charset($db, 'utf8');
@@ -54,6 +54,7 @@
     $row= mysqli_fetch_array($result);
     $competencia3= $row{'tecnica_idtecnica'};
           ?>
+    <h1>Oferta de trabajo</h1>
            <label>Id</label>
  <div class="input-group input-group-lg">
  <span class="input-group-addon" id="sizing-addon1"></span>
@@ -62,7 +63,7 @@ echo $_SESSION['id'];
 ?>" placeholder="" readonly>
 </div>
     <label>Estatus</label>
-    <select name="activot" class="form-control dropd">
+    <select name="activo" class="form-control dropd">
     <?php
                 echo'<option value="'.$activo.'">'.$activo.'</option>';
         ?>
@@ -105,7 +106,7 @@ echo $descripcion;
                         <label>Teléfono</label>
       <div class="input-group input-group-lg">
  <span class="input-group-addon" id="sizing-addon1"></span>
-  <input type="telefono" class="form-control" name="telefono" aria-describedby="sizing-addon1" value="<?php
+  <input type="text" class="form-control" name="telefono" aria-describedby="sizing-addon1" value="<?php
 echo $telefono;                                         
 ?>">
 </div>
@@ -119,21 +120,21 @@ echo $correo;
     <label>Años de experiencia necesarios</label>
       <div class="input-group input-group-lg">
  <span class="input-group-addon" id="sizing-addon1"></span>
-  <input type="text" class="form-control" name="anos_expt" aria-describedby="sizing-addon1" value="<?php
+  <input type="text" class="form-control" name="anos_exp" aria-describedby="sizing-addon1" value="<?php
 echo $anos;        
 ?>">
 </div>
     <label>Edad mínima requerida</label>
       <div class="input-group input-group-lg">
  <span class="input-group-addon" id="sizing-addon1"></span>
-  <input type="text" class="form-control" name="edadt" aria-describedby="sizing-addon1" value="<?php
+  <input type="text" class="form-control" name="edad" aria-describedby="sizing-addon1" value="<?php
 echo $edad;        
 ?>">
 </div>
     <label>Horario</label>
-  <select name="horariou" class="form-control dropd">
+  <select name="horario" class="form-control dropd">
     <?php
-        $query="select id_horario, nombre from horario where id_horario='$horario'";
+        $query="select id_horario, tipo from horario where id_horario='$horario'";
         $result= mysqli_query($db, $query);
         if($result)
         {
@@ -154,7 +155,7 @@ echo $edad;
         ?>
      </select>
      <label>Categoría</label>
-  <select name="categoriau" class="form-control dropd">
+  <select name="categoria" class="form-control dropd">
     <?php
         $query="select idcategoria, nombre from categoria where idcategoria='$categoria'";
         $result= mysqli_query($db, $query);
@@ -177,7 +178,7 @@ echo $edad;
         ?>
      </select>
     <label>Subcategoría</label>
-  <select name="subcategoriau" class="form-control dropd">
+  <select name="subcategoria" class="form-control dropd">
     <?php
         $query="select idsubcategoria, nombre from subcategoria where idsubcategoria='$subcategoria'";
         $result= mysqli_query($db, $query);
@@ -223,7 +224,7 @@ echo $edad;
         ?>
      </select>
      <label>Nivel de inglés</label>
-  <select name="inglest" class="form-control dropd">
+  <select name="ingles" class="form-control dropd">
     <?php
         $query="select idingles, nivel from ingles where idingles='$ingles'";
         $result= mysqli_query($db, $query);
@@ -246,9 +247,9 @@ echo $edad;
         ?>
      </select>
     <label>Empresa</label>
-  <select name="inglest" class="form-control dropd">
+  <select name="empresa" class="form-control dropd">
     <?php
-        $query="select idempresa, nivel from empresa where idempresa='$empresa'";
+        $query="select idempresa, nombre from empresa where idempresa='$empresa'";
         $result= mysqli_query($db, $query);
         if($result)
         {
@@ -269,7 +270,7 @@ echo $edad;
         ?>
      </select>
     <label>Sexo</label>
-  <select name="sexot" class="form-control dropd">
+  <select name="sexo" class="form-control dropd">
     <?php
         $query="select idsexo, nombre from sexo where idsexo='$sexo'";
         $result= mysqli_query($db, $query);
@@ -292,7 +293,7 @@ echo $edad;
         ?>
      </select>
     <label>Educación necesaria</label>
-  <select name="sexot" class="form-control dropd">
+  <select name="educacion" class="form-control dropd">
     <?php
         $query="select ideducacion, nombre from educacion where ideducacion='$educacion'";
         $result= mysqli_query($db, $query);
@@ -338,7 +339,7 @@ echo $edad;
         ?>
      </select>
     <label>Habilidad con importancia 2</label>
-  <select name="habilidad1t" class="form-control dropd">
+  <select name="habilidad2t" class="form-control dropd">
     <?php
         $query="select idhabilidad, nombre from habilidad where idhabilidad='$habilidad2'";
         $result= mysqli_query($db, $query);
@@ -361,7 +362,7 @@ echo $edad;
         ?>
      </select>
     <label>Habilidad con importancia 3</label>
-  <select name="habilidad1t" class="form-control dropd">
+  <select name="habilidad3t" class="form-control dropd">
     <?php
         $query="select idhabilidad, nombre from habilidad where idhabilidad='$habilidad3'";
         $result= mysqli_query($db, $query);
@@ -456,7 +457,7 @@ echo $edad;
   		<button type="submit" class="btn btn-info btn-lg" name="empresa_editar">Cambiar datos</button>
   	</div>
       	<p>
-         <a href="index-admin.php#!/Empresa">¿Deseas regresar?</a>
+         <a href="index-admin.php#!/Trabajo">¿Deseas regresar?</a>
   	</p>
   </form>
 </div>

@@ -110,6 +110,10 @@ app.config(function($routeProvider){
 				templateUrl:"admin/relaciones/consultas/consulta-primaria.php",
 				controller:"ofertaCtrl"
 		})
+    .when("/Usuario-consultar", {
+				templateUrl:"admin/relaciones/consultas/usuario-consultar.php",
+				controller:"ofertaCtrl"
+		})
         .when("/Ofertatrabajo", {
         templateUrl:"partials/admin/ofertacompetencia.php",
 				controller:"ofertaCtrl"
@@ -122,6 +126,54 @@ app.config(function($routeProvider){
         templateUrl:"partials/admin/ofertaexito.php",
 				controller:"ofertaCtrl"
 		}) 
+    .when("/Relacion-secundaria1", {
+        templateUrl:"admin/relaciones/relacion-secundaria1.php",
+				controller:"ofertaCtrl"
+		}) 
+    .when("/Consulta-trabajo2", {
+				templateUrl:"admin/relaciones/consultas/consulta-secundaria1.php",
+				controller:"ofertaCtrl"
+		})
+    .when("/Relacion-secundaria2", {
+        templateUrl:"admin/relaciones/relacion-secundaria2.php",
+				controller:"ofertaCtrl"
+		})
+    .when("/Consulta-trabajo3", {
+				templateUrl:"admin/relaciones/consultas/consulta-secundaria2.php",
+				controller:"ofertaCtrl"
+		})
+    .when("/Relacion-secundaria3", {
+        templateUrl:"admin/relaciones/relacion-secundaria3.php",
+				controller:"ofertaCtrl"
+		})
+    .when("/Consulta-trabajo4", {
+				templateUrl:"admin/relaciones/consultas/consulta-secundaria3.php",
+				controller:"ofertaCtrl"
+		})
+    .when("/Relacion-terciaria1", {
+        templateUrl:"admin/relaciones/relacion-terciaria1.php",
+				controller:"ofertaCtrl"
+		})
+    .when("/Consulta-trabajo5", {
+				templateUrl:"admin/relaciones/consultas/consulta-terciaria1.php",
+				controller:"ofertaCtrl"
+		})
+    .when("/Relacion-terciaria2", {
+        templateUrl:"admin/relaciones/relacion-terciaria2.php",
+				controller:"ofertaCtrl"
+		}) 
+    .when("/Consulta-trabajo6", {
+				templateUrl:"admin/relaciones/consultas/consulta-terciaria2.php",
+				controller:"ofertaCtrl"
+		})
+    .when("/Relacion-terciaria3", {
+        templateUrl:"admin/relaciones/relacion-terciaria3.php",
+				controller:"ofertaCtrl"
+		}) 
+    .when("/Consulta-trabajo7", {
+				templateUrl:"admin/relaciones/consultas/consulta-terciaria3.php",
+				controller:"ofertaCtrl"
+		})
 		.otherwise({
 				templateUrl:"partials/admin/main-admin.php",
 				controller:"mainCtrl"

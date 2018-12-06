@@ -69,13 +69,13 @@
           <li class="dropdown-header">Relación primaria</li>
         <li><a href="#!Relacion-primaria">Habilidad, Competencia y Nivel de inglés</a></li>
         <li class="dropdown-header">Relaciones secundarias</li>
-        <li><a href="#!">Habilidad y Competencia</a></li>
-        <li><a href="#!">Habilidad y Nivel de inglés</a></li>
-        <li><a href="#!">Competencia y Nivel de inglés</a></li>
+        <li><a href="#!Relacion-secundaria1">Habilidad y Competencia</a></li>
+        <li><a href="#!Relacion-secundaria2">Habilidad y Nivel de inglés</a></li>
+        <li><a href="#!Relacion-secundaria3">Competencia y Nivel de inglés</a></li>
            <li class="dropdown-header">Relaciones terciarias</li>
-        <li><a href="#!">Habilidad</a></li>
-        <li><a href="#!">Competencia</a></li>
-        <li><a href="#!">Nivel de inglés</a></li>
+        <li><a href="#!Relacion-terciaria1">Habilidad</a></li>
+        <li><a href="#!Relacion-terciaria2">Competencia</a></li>
+        <li><a href="#!Relacion-terciaria3">Nivel de inglés</a></li>
       </ul></li>
           </ul>
             

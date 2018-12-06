@@ -86,7 +86,7 @@ $rcompetencia1 =mysqli_query($db,$qcompetencia1);
                                  
                                      ?>
      <?php
-     $qpericidad1="select * from usuario_has_tecnica where user_register_id_usuario = $id;";
+     $qpericidad1="select * from usuario_has_tecnica where user_register_id_usuario = $id and importancia=1";
      $rpericidad1 =mysqli_query($db,$qpericidad1);
      $rowpericidad1=mysqli_fetch_array($rpericidad1);
      $vpericidad1 = $rowpericidad1['pericidad'];
@@ -133,7 +133,7 @@ $vcompetencia2 = $rowcompetencia2['tecnica_idtecnica'];
      </select>
 
      <?php
-     $qpericidad2="select * from usuario_has_tecnica where user_register_id_usuario = $id;";
+     $qpericidad2="select * from usuario_has_tecnica where user_register_id_usuario = $id and importancia=2";
      $rpericidad2 =mysqli_query($db,$qpericidad2);
      $rowpericidad2=mysqli_fetch_array($rpericidad2);
      $vpericidad2 = $rowpericidad2['pericidad'];
@@ -173,7 +173,7 @@ $vcompetencia2 = $rowcompetencia2['tecnica_idtecnica'];
      </select>
 
      <?php
-     $qpericidad3="select * from usuario_has_tecnica where user_register_id_usuario = $id;";
+     $qpericidad3="select * from usuario_has_tecnica where user_register_id_usuario = $id and importancia=3";
      $rpericidad3 =mysqli_query($db,$qpericidad3);
      $rowpericidad3=mysqli_fetch_array($rpericidad3);
      $vpericidad3 = $rowpericidad3['pericidad'];
@@ -183,7 +183,7 @@ $vcompetencia2 = $rowcompetencia2['tecnica_idtecnica'];
                 <div class="labelac">Semestres con experiencia</div>
  <div class="input-group input-group-lg">
  <span class="input-group-addon" id="sizing-addon1"></span>
-  <input type="number" class="form-control" name="pericidad3" ria-describedby="sizing-addon1" value="<?php echo $vpericidad2; ?>" required>
+  <input type="number" class="form-control" name="pericidad3" ria-describedby="sizing-addon1" value="<?php echo $vpericidad3; ?>" required>
                    </div>
     <div class="input-group">
     <button type="submit" class="btn btn-success btn-lg" name="usuario_competencia" value="">Siguiente</button>
