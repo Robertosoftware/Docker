@@ -28,7 +28,7 @@
   <input type="email" class="form-control" name="correo" ria-describedby="sizing-addon1" value="">
 </div>
 <div class="input-group">
-  		<button type="submit" class="btn btn-primary btn-lg" name="recuperar">Login</button>
+  		<button type="submit" class="btn btn-primary btn-lg" name="recuperar">Recuperar</button>
   	</div>
     <p>
   		¿Deseas regresar? <a href="login.php">Click aquí</a>

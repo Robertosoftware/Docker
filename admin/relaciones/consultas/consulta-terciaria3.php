@@ -6,7 +6,7 @@
           ?>
 <div class="jumbotron">
                <div class="container">
-                       <h1><strong>MATCH</strong> PRIMARIO DE USUARIOS</h1>
+                       <h1><strong>MATCH</strong> TERCIARIO DE USUARIOS INGLÉS</h1>
                    
     </div>
     <div class="container">

@@ -8,6 +8,7 @@ session_start();
 // initializing variables
 
 $db = mysqli_connect('localhost', 'root', '254088Ma!', 'mandra');
+mysqli_set_charset($db, 'utf8');
 $correo=$_SESSION['correo'];
 if (isset($_POST['registrar_usuario'])) {
 $q="select * from user_register where correo = '$correo';";

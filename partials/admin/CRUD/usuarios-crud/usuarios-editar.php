@@ -7,7 +7,7 @@
    <h1>Perfil del usuario</h1>
                       <?php
            $db = mysqli_connect('localhost', 'root', '254088Ma!', 'mandra');
-      mysqli_set_charset($db, 'utf8')
+      mysqli_set_charset($db, 'utf8');
           ?>
     <div class="labelac">Id usuario</div>
   <input type="text" class="form-control" name="id" ria-describedby="sizing-addon1" value="<?php
@@ -439,7 +439,7 @@ $rcompetencia1 =mysqli_query($db,$qcompetencia1);
         </option>
         <?php
                                  
-         $query="select * from tecnica where competencia_idcompetencia='$competencia1'";
+         $query="select * from tecnica";
         $result= mysqli_query($db, $query);
                                  
         if($result)
@@ -490,7 +490,7 @@ $vcompetencia2 = $rowcompetencia2['tecnica_idtecnica'];
         <?php  echo $arreglo[2]; ?>
         </option>
         <?php
-         $query="select * from tecnica where competencia_idcompetencia='$competencia2'";
+         $query="select * from tecnica";
         $result= mysqli_query($db, $query);
         if($result)
         {
@@ -530,7 +530,7 @@ $vcompetencia2 = $rowcompetencia2['tecnica_idtecnica'];
         <?php  echo $arreglo[3]; ?>
         </option>
         <?php
-         $query="select * from tecnica where competencia_idcompetencia='$competencia3'";
+         $query="select * from tecnica";
         $result= mysqli_query($db, $query);
         if($result)
         {
